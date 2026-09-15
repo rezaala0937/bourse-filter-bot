@@ -2,7 +2,7 @@ name: Bourse Filter Alert
 
 on:
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "*/10 5-9 * * 6,0,1,2,3"
   workflow_dispatch:
 
 jobs:
@@ -18,7 +18,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests tsetmc-api pandas
+        run: pip install pytse-client pandas requests
 
       - name: Run filter script
         env:
