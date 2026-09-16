@@ -18,7 +18,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install pytse-client pandas requests
+        run: pip install requests tsetmc-api pandas
 
       - name: Run filter script
         env:
